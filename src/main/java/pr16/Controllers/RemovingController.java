@@ -20,9 +20,9 @@ public class RemovingController {
     @GetMapping("/postoffice/{cityname}")
     public String removePostOffice(@PathVariable String cityname) {
         if (postOfficeService.removePostOffice(cityname)) {
-            return "post office deleted";
+            return "Post office deleted";
         } else {
-            return "post office doesn't exists";
+            return "Post office doesn't exists";
         }
     }
 
@@ -39,9 +39,9 @@ public class RemovingController {
     public String removeDeparture(@PathVariable String cityname, @PathVariable String type) {
 
         if (departureService.removeDeparture(cityname, type)) {
-            return "departure removed";
+            return "Departure removed";
         } else {
-            return "departure or post office doesn't exist";
+            return "Departure or post office doesn't exist";
         }
     }
 

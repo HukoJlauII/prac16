@@ -19,9 +19,9 @@ public class AddingController {
     public String addPostOffice(@PathVariable String name, @PathVariable String cityname) {
 
         if (postOfficeService.addPostOffice(name, cityname) != null) {
-            return "post office created";
+            return "Post office created";
         } else {
-            return "post office already exists";
+            return "Post office already exists";
         }
     }
 
@@ -29,9 +29,9 @@ public class AddingController {
     public String addDeparture(@PathVariable String cityname, @PathVariable String type, @PathVariable String date) {
 
         if (departureService.addDeparture(cityname, type, date) != null) {
-            return "departure added";
+            return "Departure added";
         } else {
-            return "post office doesn't exist or departure exist";
+            return "Post office doesn't exist or departure already exists";
         }
 
     }
