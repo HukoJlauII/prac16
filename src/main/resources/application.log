@@ -1,33 +1,74 @@
-595  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-595  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 15676 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-598  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1322 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1372 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 41 ms. Found 2 JPA repository interfaces.
-1706 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1711 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1711 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1712 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-1778 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1778 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1141 ms
-1934 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-1964 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-2050 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2123 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2255 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2265 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2706 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2711 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-2955 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3275 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-3296 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3311 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-3322 [main] INFO  pr16.Pr16Application – Started Pr16Application in 3.075 seconds (JVM running for 3.652)
-3828 [RMI TCP Connection(2)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-3828 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-3831 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-16642 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select departure0_.id as id1_0_, departure0_.date as date2_0_, departure0_.postoffice_id as postoffi4_0_, departure0_.type as type3_0_ from jpa.departure departure0_ where departure0_.type=?
-16652 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-16664 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-16675 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
-16690 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – insert into jpa.departure (date, postoffice_id, type, id) values (?, ?, ?, ?)
-16697 [http-nio-8080-exec-1] INFO  p.S.I.DepartureService – Adding departure Departure(id=12, type=flights, date=21.01.2021)
+692  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+692  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 2272 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
+704  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+2076 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2127 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2671 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+2680 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+2680 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+2681 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+2756 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+2756 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1949 ms
+3023 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+3051 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+3135 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+3205 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+3509 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+3518 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+4062 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+4067 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+4396 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+4893 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+4915 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+4932 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+4944 [main] INFO  pr16.Pr16Application – Started Pr16Application in 4.592 seconds (JVM running for 5.343)
+5268 [RMI TCP Connection(2)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+5268 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+5271 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 3 ms
+13068 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+13088 [http-nio-8080-exec-1] INFO  p.S.I.PostOfficeService – Post office already exists
+13089 [http-nio-8080-exec-1] INFO  pr16.Aspect.Aspect – addPostOffice executed in 98 ms
+25334 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+25336 [http-nio-8080-exec-4] INFO  p.S.I.PostOfficeService – Post office already exists
+25336 [http-nio-8080-exec-4] INFO  pr16.Aspect.Aspect – addPostOffice executed in 3 ms
+32588 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+32602 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
+32621 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – insert into jpa.post_office (city_name, name, id) values (?, ?, ?)
+32633 [http-nio-8080-exec-5] INFO  p.S.I.PostOfficeService – Post office added successfully
+32633 [http-nio-8080-exec-5] INFO  pr16.Aspect.Aspect – addPostOffice executed in 46 ms
+58869 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+58872 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+58909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
+415  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
+415  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 15688 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
+417  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
+1089 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+1577 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
+1584 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
+1584 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
+1584 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
+1664 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
+1664 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1219 ms
+1855 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
+1891 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
+1971 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2045 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
+2180 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
+2191 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2809 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2815 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
+3212 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+3670 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
+3698 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
+3713 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
+3726 [main] INFO  pr16.Pr16Application – Started Pr16Application in 3.527 seconds (JVM running for 3.998)
+4111 [RMI TCP Connection(1)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
+4111 [RMI TCP Connection(1)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
+4113 [RMI TCP Connection(1)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
+12051 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+12070 [http-nio-8080-exec-1] INFO  p.S.I.PostOfficeService – Post office already exists
+13457 [http-nio-8080-exec-1] INFO  pr16.Aspect.Aspect – addPostOffice executed in 1472 ms
+65976 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
+65977 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
+65982 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
