@@ -1,391 +1,72 @@
-692  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-692  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 2272 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-704  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-2076 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2127 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
-2671 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-2680 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-2680 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-2681 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-2756 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-2756 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1949 ms
-3023 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-3051 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-3135 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-3205 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-3509 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-3518 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-4062 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-4067 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-4396 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-4893 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-4915 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-4932 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-4944 [main] INFO  pr16.Pr16Application – Started Pr16Application in 4.592 seconds (JVM running for 5.343)
-5268 [RMI TCP Connection(2)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-5268 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-5271 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 3 ms
-13068 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-13088 [http-nio-8080-exec-1] INFO  p.S.I.PostOfficeService – Post office already exists
-13089 [http-nio-8080-exec-1] INFO  pr16.Aspect.Aspect – addPostOffice executed in 98 ms
-25334 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-25336 [http-nio-8080-exec-4] INFO  p.S.I.PostOfficeService – Post office already exists
-25336 [http-nio-8080-exec-4] INFO  pr16.Aspect.Aspect – addPostOffice executed in 3 ms
-32588 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-32602 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – select nextval ('jpa.hibernate_sequence')
-32621 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL – insert into jpa.post_office (city_name, name, id) values (?, ?, ?)
-32633 [http-nio-8080-exec-5] INFO  p.S.I.PostOfficeService – Post office added successfully
-32633 [http-nio-8080-exec-5] INFO  pr16.Aspect.Aspect – addPostOffice executed in 46 ms
-58869 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-58872 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-58909 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-415  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-415  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 15688 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-417  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1089 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1125 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
-1577 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1584 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1584 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1584 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-1664 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1664 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1219 ms
-1855 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-1891 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-1971 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2045 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2180 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2191 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2809 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2815 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3212 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3670 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-3698 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3713 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-3726 [main] INFO  pr16.Pr16Application – Started Pr16Application in 3.527 seconds (JVM running for 3.998)
-4111 [RMI TCP Connection(1)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-4111 [RMI TCP Connection(1)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-4113 [RMI TCP Connection(1)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-12051 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-12070 [http-nio-8080-exec-1] INFO  p.S.I.PostOfficeService – Post office already exists
-13457 [http-nio-8080-exec-1] INFO  pr16.Aspect.Aspect – addPostOffice executed in 1472 ms
-65976 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-65977 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-65982 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-556  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-556  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 12496 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-562  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1520 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1559 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-1990 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1996 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1996 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1997 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-2068 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-2068 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1381 ms
-2272 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-2306 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-2387 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2452 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2580 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2589 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-3044 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-3049 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3349 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3777 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-3803 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3820 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-3832 [main] INFO  pr16.Pr16Application – Started Pr16Application in 3.628 seconds (JVM running for 4.18)
-4369 [RMI TCP Connection(2)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-4369 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-4370 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 1 ms
-38782 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-38783 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-38790 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-408  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-410  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 24444 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-411  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1092 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1129 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
-1567 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1573 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1574 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1574 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-1646 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1646 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1203 ms
-1865 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-1896 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-1973 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2041 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2275 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2284 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2719 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2725 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3029 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration – spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-3433 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver – Exposing 1 endpoint(s) beneath base path '/actuator'
-3456 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Starting ProtocolHandler ["http-nio-8080"]
-3478 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat started on port(s): 8080 (http) with context path ''
-3490 [main] INFO  pr16.Pr16Application – Started Pr16Application in 3.32 seconds (JVM running for 3.771)
-3896 [RMI TCP Connection(2)-192.168.1.17] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring DispatcherServlet 'dispatcherServlet'
-3896 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Initializing Servlet 'dispatcherServlet'
-3898 [RMI TCP Connection(2)-192.168.1.17] INFO  o.s.web.servlet.DispatcherServlet – Completed initialization in 2 ms
-22791 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL – select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
-22811 [http-nio-8080-exec-1] INFO  p.S.I.PostOfficeService – Post office already exists
-24941 [http-nio-8080-exec-1] INFO  pr16.Aspect.Aspect – addPostOffice executed in 2239 ms
-1402449 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-1402450 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-1402455 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-1352 [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 8744 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-1356 [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1531 [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-3101 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-3140 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
-3573 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-3579 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-3579 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-3579 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-3647 [main] ERROR o.a.catalina.core.ContainerBase – A child container failed during start
-java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:926)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at pr16.Pr16Application.main(Pr16Application.java:10)
-Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	... 29 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/apache/tomcat/util/descriptor/tld/TldParser
-	at org.apache.jasper.servlet.TldScanner.<init>(TldScanner.java:84)
-	at org.apache.jasper.servlet.JasperInitializer.newTldScanner(JasperInitializer.java:100)
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:81)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	... 35 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.util.descriptor.tld.TldParser
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	... 40 common frames omitted
-3648 [main] ERROR o.a.catalina.core.ContainerBase – A child container failed during start
-java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:926)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at pr16.Pr16Application.main(Pr16Application.java:10)
-Caused by: org.apache.catalina.LifecycleException: A child container failed during start
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:938)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	... 21 common frames omitted
-Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:926)
-	... 29 common frames omitted
-Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	... 29 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/apache/tomcat/util/descriptor/tld/TldParser
-	at org.apache.jasper.servlet.TldScanner.<init>(TldScanner.java:84)
-	at org.apache.jasper.servlet.JasperInitializer.newTldScanner(JasperInitializer.java:100)
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:81)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	... 35 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.util.descriptor.tld.TldParser
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	... 40 common frames omitted
-3649 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Pausing ProtocolHandler ["http-nio-8080"]
-3649 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
-3650 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Destroying ProtocolHandler ["http-nio-8080"]
-3654 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-3665 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener – 
+184  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Neither @ContextConfiguration nor @ContextHierarchy found for test class [pr16.Services.ImplementsService.PostOfficeServiceTest], using SpringBootContextLoader
+204  [Test worker] INFO  o.s.t.c.s.AbstractContextLoader � Could not detect default resource locations for test class [pr16.Services.ImplementsService.PostOfficeServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+205  [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils � Could not detect default configuration classes for test class [pr16.Services.ImplementsService.PostOfficeServiceTest]: PostOfficeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+337  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Found @SpringBootConfiguration pr16.Pr16Application for test class pr16.Services.ImplementsService.PostOfficeServiceTest
+427  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+443  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5b69fd74, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f325091, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@437e951d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@77b325b3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@63a5e46c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7e8e8651, org.springframework.test.context.transaction.TransactionalTestExecutionListener@49ef32e0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@271f18d3, org.springframework.test.context.event.EventPublishingTestExecutionListener@6bd51ed8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@61e3a1fd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@51abf713, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@eadb475, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4d4d48a6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@315df4bb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3fc08eec]
+780  [Test worker] INFO  p.S.I.PostOfficeServiceTest � Starting PostOfficeServiceTest using Java 17.0.1 on DESKTOP-2M64KGF with PID 13668 (started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
+781  [Test worker] INFO  p.S.I.PostOfficeServiceTest � No active profile set, falling back to 1 default profile: "default"
+784  [background-preinit] INFO  o.h.validator.internal.util.Version � HV000001: Hibernate Validator 6.2.2.Final
+1844 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1928 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 74 ms. Found 3 JPA repository interfaces.
+3262 [Test worker] INFO  o.h.jpa.internal.util.LogHelper � HHH000204: Processing PersistenceUnitInfo [name: default]
+3405 [Test worker] INFO  org.hibernate.Version � HHH000412: Hibernate ORM core version 5.6.5.Final
+3954 [Test worker] INFO  o.h.annotations.common.Version � HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+4173 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Starting...
+4522 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Start completed.
+4540 [Test worker] INFO  org.hibernate.dialect.Dialect � HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+5617 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator � HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+5624 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Initialized JPA EntityManagerFactory for persistence unit 'default'
+5824 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration � spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+8083 [Test worker] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration � 
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-3680 [main] ERROR o.s.boot.SpringApplication – Application run failed
-org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:163)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at pr16.Pr16Application.main(Pr16Application.java:10)
-Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478)
-	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
-	... 8 common frames omitted
-Caused by: org.apache.catalina.LifecycleException: A child container failed during start
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:938)
-	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
-	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
-	... 13 common frames omitted
-Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: A child container failed during start
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:926)
-	... 21 common frames omitted
-Caused by: org.apache.catalina.LifecycleException: A child container failed during start
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:938)
-	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	... 21 common frames omitted
-Caused by: java.util.concurrent.ExecutionException: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:926)
-	... 29 common frames omitted
-Caused by: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Tomcat].StandardHost[localhost].TomcatEmbeddedContext[]]
-	at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
-	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
-	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
-	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
-	... 29 common frames omitted
-Caused by: java.lang.NoClassDefFoundError: org/apache/tomcat/util/descriptor/tld/TldParser
-	at org.apache.jasper.servlet.TldScanner.<init>(TldScanner.java:84)
-	at org.apache.jasper.servlet.JasperInitializer.newTldScanner(JasperInitializer.java:100)
-	at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:81)
-	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
-	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
-	... 35 common frames omitted
-Caused by: java.lang.ClassNotFoundException: org.apache.tomcat.util.descriptor.tld.TldParser
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	... 40 common frames omitted
-667  [background-preinit] INFO  o.h.validator.internal.util.Version – HV000001: Hibernate Validator 6.2.2.Final
-667  [main] INFO  pr16.Pr16Application – Starting Pr16Application using Java 17.0.1 on DESKTOP-2M64KGF with PID 20296 (C:\Users\Nekit\IdeaProjects\pr16\build\classes\java\main started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
-669  [main] INFO  pr16.Pr16Application – No active profile set, falling back to 1 default profile: "default"
-1438 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-1479 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate – Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
-1927 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer – Tomcat initialized with port(s): 8080 (http)
-1932 [main] INFO  o.a.coyote.http11.Http11NioProtocol – Initializing ProtocolHandler ["http-nio-8080"]
-1932 [main] INFO  o.a.catalina.core.StandardService – Starting service [Tomcat]
-1932 [main] INFO  o.a.catalina.core.StandardEngine – Starting Servlet engine: [Apache Tomcat/9.0.58]
-1996 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] – Initializing Spring embedded WebApplicationContext
-1996 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext – Root WebApplicationContext: initialization completed in 1279 ms
-2177 [main] INFO  o.h.jpa.internal.util.LogHelper – HHH000204: Processing PersistenceUnitInfo [name: default]
-2207 [main] INFO  org.hibernate.Version – HHH000412: Hibernate ORM core version 5.6.5.Final
-2283 [main] INFO  o.h.annotations.common.Version – HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2346 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Starting...
-2456 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Start completed.
-2464 [main] INFO  org.hibernate.dialect.Dialect – HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2882 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator – HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2886 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Initialized JPA EntityManagerFactory for persistence unit 'default'
-3172 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext – Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'bCryptPasswordEncoder'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-3172 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean – Closing JPA EntityManagerFactory for persistence unit 'default'
-3173 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown initiated...
-3176 [main] INFO  com.zaxxer.hikari.HikariDataSource – HikariPool-1 - Shutdown completed.
-3178 [main] INFO  o.a.catalina.core.StandardService – Stopping service [Tomcat]
-3189 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener – 
+Using generated security password: 5a99a6f8-33a2-410a-8ecf-9340b2e7d069
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-3202 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter – 
+8251 [Test worker] INFO  o.s.s.w.DefaultSecurityFilterChain � Will not secure any request
+8321 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver � Exposing 1 endpoint(s) beneath base path '/actuator'
+8378 [Test worker] INFO  p.S.I.PostOfficeServiceTest � Started PostOfficeServiceTest in 7.884 seconds (JVM running for 9.266)
+8713 [Test worker] DEBUG org.hibernate.SQL � select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+8738 [Test worker] DEBUG org.hibernate.SQL � select nextval ('jpa.hibernate_sequence')
+8771 [Test worker] DEBUG org.hibernate.SQL � insert into jpa.post_office (city_name, name, id) values (?, ?, ?)
+8780 [Test worker] INFO  p.S.I.PostOfficeService � Post office added successfully
+11169 [Test worker] INFO  pr16.Aspect.Aspect � addPostOffice executed in 2567 ms
+11200 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Closing JPA EntityManagerFactory for persistence unit 'default'
+11203 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown initiated...
+11211 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown completed.
+167  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Neither @ContextConfiguration nor @ContextHierarchy found for test class [pr16.Services.ImplementsService.PostOfficeServiceTest], using SpringBootContextLoader
+174  [Test worker] INFO  o.s.t.c.s.AbstractContextLoader � Could not detect default resource locations for test class [pr16.Services.ImplementsService.PostOfficeServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+176  [Test worker] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils � Could not detect default configuration classes for test class [pr16.Services.ImplementsService.PostOfficeServiceTest]: PostOfficeServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+289  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Found @SpringBootConfiguration pr16.Pr16Application for test class pr16.Services.ImplementsService.PostOfficeServiceTest
+375  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+388  [Test worker] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper � Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@26f143ed, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c1e3314, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4b770e40, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@78e16155, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54a3ab8f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1968a49c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6a1ebcff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@19868320, org.springframework.test.context.event.EventPublishingTestExecutionListener@50b0bc4c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c20be82, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@13c612bd, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3ef41c66, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6b739528, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@622ef26a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41de5768]
+630  [Test worker] INFO  p.S.I.PostOfficeServiceTest � Starting PostOfficeServiceTest using Java 17.0.1 on DESKTOP-2M64KGF with PID 8300 (started by Nekit in C:\Users\Nekit\IdeaProjects\pr16)
+630  [Test worker] INFO  p.S.I.PostOfficeServiceTest � No active profile set, falling back to 1 default profile: "default"
+644  [background-preinit] INFO  o.h.validator.internal.util.Version � HV000001: Hibernate Validator 6.2.2.Final
+1457 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+1512 [Test worker] INFO  o.s.d.r.c.RepositoryConfigurationDelegate � Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2546 [Test worker] INFO  o.h.jpa.internal.util.LogHelper � HHH000204: Processing PersistenceUnitInfo [name: default]
+2595 [Test worker] INFO  org.hibernate.Version � HHH000412: Hibernate ORM core version 5.6.5.Final
+2749 [Test worker] INFO  o.h.annotations.common.Version � HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2839 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Starting...
+2996 [Test worker] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Start completed.
+3011 [Test worker] INFO  org.hibernate.dialect.Dialect � HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+3660 [Test worker] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator � HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+3671 [Test worker] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Initialized JPA EntityManagerFactory for persistence unit 'default'
+3928 [Test worker] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration � spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+5946 [Test worker] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration � 
 
-***************************
-APPLICATION FAILED TO START
-***************************
+Using generated security password: e38721e7-60f0-4c0e-bbcd-a7c3d4500fa9
 
-Description:
-
-Field bCryptPasswordEncoder in pr16.Services.ImplementsService.UserService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
-
+6217 [Test worker] INFO  o.s.s.w.DefaultSecurityFilterChain � Will not secure any request
+6293 [Test worker] INFO  o.s.b.a.e.web.EndpointLinksResolver � Exposing 1 endpoint(s) beneath base path '/actuator'
+6401 [Test worker] INFO  p.S.I.PostOfficeServiceTest � Started PostOfficeServiceTest in 5.982 seconds (JVM running for 7.33)
+6796 [Test worker] DEBUG org.hibernate.SQL � select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+6819 [Test worker] DEBUG org.hibernate.SQL � select postoffice0_.id as id1_1_, postoffice0_.city_name as city_nam2_1_, postoffice0_.name as name3_1_ from jpa.post_office postoffice0_ where postoffice0_.city_name=?
+6835 [Test worker] DEBUG org.hibernate.SQL � select postoffice0_.id as id1_1_0_, postoffice0_.city_name as city_nam2_1_0_, postoffice0_.name as name3_1_0_ from jpa.post_office postoffice0_ where postoffice0_.id=?
+6853 [Test worker] DEBUG org.hibernate.SQL � select departures0_.postoffice_id as postoffi4_0_0_, departures0_.id as id1_0_0_, departures0_.id as id1_0_1_, departures0_.date as date2_0_1_, departures0_.postoffice_id as postoffi4_0_1_, departures0_.type as type3_0_1_ from jpa.departure departures0_ where departures0_.postoffice_id=?
+6874 [Test worker] DEBUG org.hibernate.SQL � delete from jpa.post_office where id=?
+6883 [Test worker] INFO  p.S.I.PostOfficeService � Post office removed successfully
+8445 [Test worker] INFO  pr16.Aspect.Aspect � removePostOffice executed in 1769 ms
+8479 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean � Closing JPA EntityManagerFactory for persistence unit 'default'
+8480 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown initiated...
+8486 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource � HikariPool-1 - Shutdown completed.
